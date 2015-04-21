@@ -1,0 +1,46 @@
+.list-feed 
+  margin-left: -80px
+  font-size: 0
+
+.list-feed > li
+  width: 320px
+  margin-left: 80px
+
+  font-size: 14px
+
+.list-feed .item-feed
+  position: relative
+  overflow: hidden
+  border-radius: 12px
+
+
+.list-feed .item-feed-body
+  background: #fff
+  text-align: left
+  padding-left: 45px
+  height: 480px
+  border: 4px solid $blue-color
+  border-radius: 12px
+  
+
+.list-feed .item-feed:after
+  content: ""
+  position: absolute
+  z-index: 10
+  bottom: -88px
+  left: -25px
+  display: block
+  background: url("../i/cat.png") no-repeat
+  width: 368px
+  height: 360px
+
+.list-feed .feed-price
+  position: absolute
+  z-index: 15
+  width: 80px
+  height: 80px
+  border-radius: 80px
+  bottom: 15px
+  right: 15px
+  background: $blue-color
+  color: #fff
