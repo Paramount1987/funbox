@@ -1,3 +1,5 @@
+@font-face { font-family: 'exo_2.0thin'; src: url("../fonts/exo2.0-thin-webfont.eot"); src: url("../fonts/exo2.0-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2.0-thin-webfont.woff2") format("woff2"), url("../fonts/exo2.0-thin-webfont.woff") format("woff"), url("../fonts/exo2.0-thin-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 
@@ -85,12 +87,12 @@ td, th { padding: 0; }
 
 html { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
-body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.42857; color: #333333; background-color: white; word-wrap: break-word; }
+body { font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.42857; color: #333333; background-color: white; word-wrap: break-word; }
 
 input, button, select, textarea { font-family: inherit; font-size: inherit; line-height: inherit; }
 
-a { color: #428bca; text-decoration: none; }
-a:hover, a:focus { color: #2a6496; text-decoration: underline; }
+a { color: #1698d9; text-decoration: none; border-bottom: 1px dashed #1698d9; }
+a:hover, a:focus { text-decoration: none; border-bottom: none; }
 
 figure { margin: 0; }
 
@@ -321,10 +323,16 @@ html { position: relative; height: 100%; }
 
 body { /* Margin bottom by footer height */ height: 100%; }
 
+.wrapper { display: table; width: 100%; }
+
+.middle { display: table-cell; vertical-align: middle; }
+
+h1 { font-family: "exo_2.0thin"; }
+
 ul { list-style: none; padding: 0; }
 
 .list-inline { text-align: center; }
-.list-inline li { display: inline-block; }
+.list-inline > li { display: inline-block; vertical-align: top; }
 
 .wrapper { min-height: 100%; background: url("../i/bg-main.jpg") no-repeat; background-size: cover; }
 
@@ -332,14 +340,56 @@ ul { list-style: none; padding: 0; }
 
 .white-text { color: white; }
 
+.yellow-text { color: #eeee5f; }
+
+.pink-text { color: #d91667; }
+
 .list-feed { margin-left: -80px; font-size: 0; }
 
 .list-feed > li { width: 320px; margin-left: 80px; font-size: 14px; }
+.list-feed > li .bottom-text { font-size: 13px; }
 
-.list-feed .item-feed { position: relative; overflow: hidden; border-radius: 12px; }
+.list-feed .item-feed { position: relative; overflow: hidden; border-radius: 12px; cursor: pointer; }
 
-.list-feed .item-feed-body { background: white; text-align: left; padding-left: 45px; height: 480px; border: 4px solid #1698d9; border-radius: 12px; }
+.list-feed .item-feed-body { background: white; text-align: left; padding-left: 45px; min-height: 480px; border: 4px solid #1698d9; border-top: none; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; }
+
+.list-feed .feed-price { font-size: 40px; line-height: 50px; display: block; }
+.list-feed .feed-price .text-price { display: block; font-size: 16px; line-height: 16px; font-weight: bold; text-transform: uppercase; }
+
+.item-feed-header { float: right; background: white; width: 275px; height: 45px; border-top: 4px solid #1698d9; border-right: 4px solid #1698d9; border-top-right-radius: 12px; text-align: left; position: relative; }
+.item-feed-header:before { content: ""; display: inline-block; position: absolute; z-index: 2; left: -82px; top: 0; width: 0; height: 0; border-left: 41px solid transparent; border-top: 42px solid transparent; border-right: 41px solid white; }
+.item-feed-header:after { content: ""; display: inline-block; position: absolute; z-index: 1; left: -94px; top: -6px; width: 0; height: 0; border-left: 47px solid transparent; border-top: 47px solid transparent; border-right: 47px solid #1698d9; }
+
+.item-feed-body { color: #666666; }
+.item-feed-body .feed-title { font-size: 16px; margin: 0 0 10px 0; }
+.item-feed-body .feed-name { color: black; font-size: 48px; line-height: 48px; margin: 0; }
+.item-feed-body .feed-extra-text { font-size: 24px; font-weight: bold; margin: 0 0 10px 0; color: black; }
 
 .list-feed .item-feed:after { content: ""; position: absolute; z-index: 10; bottom: -88px; left: -25px; display: block; background: url("../i/cat.png") no-repeat; width: 368px; height: 360px; }
 
-.list-feed .feed-price { position: absolute; z-index: 15; width: 80px; height: 80px; border-radius: 80px; bottom: 15px; right: 15px; background: #1698d9; color: white; }
+.list-feed .feed-price { position: absolute; z-index: 15; width: 80px; height: 80px; border-radius: 80px; bottom: 15px; right: 15px; padding-top: 5px; background: #1698d9; color: white; }
+
+.list-feed li.disabled .item-feed { cursor: default; }
+.list-feed li.disabled .item-feed .item-feed-body { border-color: #666666; }
+.list-feed li.disabled .item-feed .item-feed-body .feed-name, .list-feed li.disabled .item-feed .item-feed-body .feed-extra-text { color: #666666; }
+.list-feed li.disabled .item-feed .item-feed-body:after { content: ""; position: absolute; z-index: 25; background: white; opacity: 0.7; filter: alpha(opacity=70); display: block; top: 45px; bottom: 0; right: 0; left: 0; }
+.list-feed li.disabled .item-feed .feed-price { background: #666666; }
+.list-feed li.disabled .item-feed .item-feed-header { border-color: #666666; }
+.list-feed li.disabled .item-feed .item-feed-header:after { border-right-color: #666666; }
+
+.list-feed li.selected .item-feed .item-feed-body { border-color: #d91667; }
+.list-feed li.selected .item-feed .feed-price { background: #d91667; }
+.list-feed li.selected .item-feed .item-feed-header { border-color: #d91667; }
+.list-feed li.selected .item-feed .item-feed-header:after { border-right-color: #d91667; }
+
+.list-feed li.selected .item-feed.hover .item-feed-body { border-color: #e62e7a; }
+.list-feed li.selected .item-feed.hover .feed-price { background: #e62e7a; }
+.list-feed li.selected .item-feed.hover .item-feed-header { border-color: #e62e7a; }
+.list-feed li.selected .item-feed.hover .item-feed-header:after { border-right-color: #e62e7a; }
+
+.list-feed .item-feed.hover .item-feed-body { border-color: #2ea8e6; }
+.list-feed .item-feed.hover .feed-price { background: #2ea8e6; }
+.list-feed .item-feed.hover .item-feed-header { border-color: #2ea8e6; }
+.list-feed .item-feed.hover .item-feed-header:after { border-right-color: #2ea8e6; }
+
+.list-feed .item-feed.hover + .bottom-text a { color: #2ea8e6; }

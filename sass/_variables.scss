@@ -27,7 +27,7 @@ $link-color:            $brand-primary !default;
 $link-hover-color:      darken($link-color, 15%) !default;
 
 //== Typography
-$font-family-base:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-base:        "Trebuchet MS","Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
 $font-size-base:          14px !default;
 
@@ -142,4 +142,9 @@ $thumbnail-caption-padding:   9px !default;
 //##
 $hr-border:                   $gray-lighter !default;
 /////////////////my variables
-$blue-color: #1698d9;
+$blue-color: #1698d9; 
+$blue-light-color: #2ea8e6;  
+$pink-color: #d91667; 
+$pink-light-color: #e62e7a;
+$yellow-color: #eeee5f;
+$gray-color: #666;

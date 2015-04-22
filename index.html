@@ -14,16 +14,6 @@
   </head>
 
     <div class="wrapper">
-  
-      <header>
-        <div class="container-fluid">
-
-          <div class="row">
-          
-          </div><!-- end row -->
-
-        </div><!-- end container -->
-      </header>
 
       <div class="middle">
 
@@ -35,49 +25,63 @@
             <ul class="list-inline list-feed">
               <li>
                 <div class="item-feed">
+                  <div class="item-feed-header"></div>
+                  <div class="clearfix"></div>
                   <div class="item-feed-body">
-                    <p class="feed-ttile">Сказочное заморское яство</p>
+                    <p class="feed-title" data-title="Сказочное заморское яство">Сказочное заморское яство</p>
                     <h3 class="feed-name">Нямушка</h3>
-                    <p class="feed-extra-text">с курой</p>
+                    <p class="feed-extra-text">с фуа-гра</p>
                     <ul class="list-default">
-                      <li>100 порций</li>
-                      <li>5 мышей в подарок</li>
-                      <li>заказчик доволен</li>
+                      <li><b>10</b> порций</li>
+                      <li>мышь в подарок</li>
                     </ul>
                   </div>  
-                  <div class="feed-price">0,5 <span>кг</span></div>
+                  <div class="feed-price"><span class="number-price">0,5</span><span class="text-price">кг</span></div>
                 </div>
-                <div class="bottom-text"><p class="white-text">Чего сидишь? Порадуй котэ, <a href="#">купи.</a></p></div>
+                <div class="bottom-text" >
+                  <p class="white-text bottom-text-change" data-text="Печень утки разварная с артишоками.">
+                    Чего сидишь? Порадуй котэ, <a href="#" class="buy-link">купи.</a>
+                  </p>
+                </div>
+              </li>
+              <li class="disabled">
+                <div class="item-feed">
+                  <div class="item-feed-header"></div>
+                  <div class="clearfix"></div>
+                  <div class="item-feed-body">
+                    <p class="feed-title" data-title="Сказочное заморское яство">Сказочное заморское яство</p>
+                    <h3 class="feed-name">Нямушка</h3>
+                    <p class="feed-extra-text">с рыбой</p>
+                    <ul class="list-default">
+                      <li><b>40</b> порций</li>
+                      <li><b>2</b> мыши в подарок</li>
+                    </ul>
+                  </div>
+                  <div class="feed-price"><span class="number-price">2</span><span class="text-price">кг</span></div>
+                </div>
+                <div class="bottom-text"><p class="yellow-text bottom-text-change">Печалька, с рыбой закончился.</p></div>
               </li>
               <li>
                 <div class="item-feed">
+                  <div class="item-feed-header"></div>
+                  <div class="clearfix"></div>
                   <div class="item-feed-body">
-                    <p class="feed-ttile">Сказочное заморское яство</p>
+                    <p class="feed-title" data-title="Сказочное заморское яство">Сказочное заморское яство</p>
                     <h3 class="feed-name">Нямушка</h3>
                     <p class="feed-extra-text">с курой</p>
                     <ul class="list-default">
-                      <li>100 порций</li>
-                      <li>5 мышей в подарок</li>
+                      <li><b>100</b> порций</li>
+                      <li><b>5</b> мышей в подарок</li>
                       <li>заказчик доволен</li>
                     </ul>
                   </div>
+                  <div class="feed-price"><span class="number-price">5</span><span class="text-price">кг</span></div>
                 </div>
-                <div class="bottom-text"><p class="white-text">Чего сидишь? Порадуй котэ, <a href="#">купи.</a></p></div>
-              </li>
-              <li>
-                <div class="item-feed">
-                  <div class="item-feed-body">
-                    <p class="feed-ttile">Сказочное заморское яство</p>
-                    <h3 class="feed-name">Нямушка</h3>
-                    <p class="feed-extra-text">с курой</p>
-                    <ul class="list-default">
-                      <li>100 порций</li>
-                      <li>5 мышей в подарок</li>
-                      <li>заказчик доволен</li>
-                    </ul>
-                  </div>
+                <div class="bottom-text" >
+                  <p class="white-text bottom-text-change" data-text="Филе из цыплят с трюфелями в бульоне.">
+                    Чего сидишь? Порадуй котэ, <a href="#" class="buy-link">купи.</a>
+                  </p>
                 </div>
-                <div class="bottom-text"><p class="white-text">Чего сидишь? Порадуй котэ, <a href="#">купи.</a></p></div>
               </li>
             </ul>
           </div><!-- end row -->
@@ -89,5 +93,6 @@
     </div><!-- end wrapper -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/funbox.js"></script>
   </body>
 </html>

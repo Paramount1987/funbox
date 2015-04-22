@@ -7,14 +7,27 @@ body
   /* Margin bottom by footer height */
   height: 100%
 
+.wrapper
+  display: table
+  width: 100%  
+
+.middle
+  display: table-cell
+  vertical-align: middle
+
+h1
+  font-family: 'exo_2.0thin'
+
 ul
   list-style: none
   padding: 0
 
 .list-inline
   text-align: center
-  li
+  > li
     display: inline-block
+    vertical-align: top
+
 
 .wrapper
   min-height: 100%  
@@ -26,3 +39,9 @@ ul
 
 .white-text
   color: #fff  
+
+.yellow-text
+  color: $yellow-color 
+
+.pink-text
+  color: $pink-color 
