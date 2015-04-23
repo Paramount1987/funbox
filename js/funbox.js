@@ -3,6 +3,7 @@ $( document ).ready(function() {
 
 var text = 'Чего сидишь? Порадуй котэ, <a href="#" class="buy-link">купи.</a>';
 
+
 function clickEvent(item){
 		if(item.closest("li").hasClass("disabled")){
 			return;
@@ -54,5 +55,16 @@ $(".list-feed .item-feed").hover(
     $(this).find(".feed-title").html($(this).find(".feed-title").data("title"));
   }
 );
+/////////////////////////////////////////////////////////////////////////////////
+$(".list-feed li.disabled").each(function( index ) {
+
+ var food = $( this).find(".feed-extra-text").data("feed");
+
+ $( this ).find(".bottom-text-change").removeClass("white-text");
+ $( this ).find(".bottom-text-change").addClass("yellow-text");
+ $( this ).find(".bottom-text-change").text("Печалька, " + food + " закончился.");
+
+});
+
 
 });
